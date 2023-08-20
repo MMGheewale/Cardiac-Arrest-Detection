@@ -1,0 +1,45 @@
+#:import MeshLinePlot kivy.garden.graph.MeshLinePlot
+Logic:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            size_hint: [1, .8]
+            Graph:
+                id: graph
+                xlabel: "Time Seconds"
+                ylabel: "Pulse"
+                y_ticks_major: 10
+                x_ticks_major: 5
+                y_grid_label: True
+                x_grid_label: True
+                padding: 5
+                x_grid: True
+                y_grid: True
+                ymin: 0
+                ymax: 150
+                xmin: 0
+                xmax: 60
+				border_color: (255,255,0,1)
+				tick_color: (255,255,0,1)
+				label_options: {'color': (1,0,0,1)}
+        BoxLayout:
+            size_hint: [1, .1]
+            orientation: "horizontal"
+			Label:
+				id: pulselabel
+				text:root.pulse_label_value
+				font_size:14
+				color: 255,255,0,1
+				
+            Button:
+                text: "START"
+                bold: True
+                on_press: root.start()
+            Button:
+                text: "STOP"
+                bold: True
+                on_press: root.stop()
+            Button:
+                text: "HOME"
+                bold: True
+                on_press: root.home()

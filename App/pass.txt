@@ -1,0 +1,9 @@
+maaz.gheewale.74@gmail.com
+MMdropin@3919
+
+
+
+
+
+DELETE https://api.thingspeak.com/channels/CHANNEL_ID/feeds.json
+        api_key=8DKVDXLQENFRFQQJ
